@@ -3,7 +3,6 @@ pool: dev-infra-pool
 jobs:
   - job: terraforminit
     steps: 
-
     - task: TerraformInstaller@1
       inputs:
         terraformVersion: 'latest'
@@ -27,6 +26,7 @@ jobs:
         publishLocation: 'pipeline'
 
   - job: terraformplan
+    dependsOn: terraforminit
     steps: 
     - task: DownloadPipelineArtifact@2
       inputs:
