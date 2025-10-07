@@ -31,7 +31,7 @@ jobs:
     - task: DownloadPipelineArtifact@2
       inputs:
         buildType: 'current'
-        artifactName: 'secartifact'
+        artifactName: 'tfsec_artifact'
         targetPath: '$(Pipeline.Workspace)'
 
     - task: Bash@3
