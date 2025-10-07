@@ -36,8 +36,11 @@ jobs:
 
     - task: Bash@3
       inputs:
-        filePath: 'chmod -R +x .rg/provider'
-        workingDirectory: 'cd $(Pipeline.Workspace)/rg'
+        targetType: 'inline'
+        script: |
+          cd $(Pipeline.Workspace)/rg
+          chmod -R +x provider
+
     - task: TerraformTask@5
       inputs:
         provider: 'azurerm'
