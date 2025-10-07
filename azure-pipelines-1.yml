@@ -39,7 +39,7 @@ jobs:
         targetType: 'inline'
         script: |
           cd $(Pipeline.Workspace)/rg
-          chmod -R +x provider
+          chmod -R +x rg
 
     - task: TerraformTask@5
       inputs:
