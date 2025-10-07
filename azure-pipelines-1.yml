@@ -45,5 +45,5 @@ jobs:
       inputs:
         provider: 'azurerm'
         command: 'plan'
-        workingDirectory: '$(Pipeline.Workspace)/rg'
+        workingDirectory: '$(Pipeline.Workspace)'
         environmentServiceNameAzureRM: 'kashi-dev-app'
