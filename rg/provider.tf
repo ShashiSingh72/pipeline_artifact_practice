@@ -5,11 +5,11 @@ terraform {
         version = "4.47.0"
     }
   }
-#   backend "azurerm" {
-#     storage_account_name = "shashistg01"
-#     container_name = "shashicontainer"
-#     key = "terraform.tfstate"
-#   }
+ backend "azurerm" {
+    storage_account_name = "artifactstg"
+    container_name = "artifactcont"
+    key = "terraform.tfstate"
+  }
 }
 provider "azurerm" {
   features {
